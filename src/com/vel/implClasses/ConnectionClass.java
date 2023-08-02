@@ -1,14 +1,15 @@
-package com.vel.Classes;
+package com.vel.implClasses;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class ConnectionClass {
+	
 
 
-	Connection con = null;
-	public Connection getConnectionDetails() {
+	static Connection con = null;
+	public static Connection getConnectionDetails() {
 		
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
@@ -20,8 +21,9 @@ public class ConnectionClass {
 			e.printStackTrace();
 		}
 		
-		QuestionImp ques = new QuestionImp(con);
-		ques.addQuestion();
+		//QuestionImp ques = new QuestionImp(con);
+		//ques.addQuestion();
+		
 		
 		return con;
 	}

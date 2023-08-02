@@ -1,4 +1,4 @@
-package com.vel.Interface;
+package com.quizapp.service;
 
 public interface Login {
 

@@ -1,15 +1,18 @@
-package com.vel.Classes;
+package com.vel.implClasses;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.Scanner;
 
-import com.vel.Interface.Question;
+import com.quizapp.pojoClasses.QuestionPojo;
+import com.quizapp.service.Question;
 
 public class QuestionImp implements Question{
 
 	
+	
+
 	PreparedStatement prs= null;
 //	This field belong to Database
 
@@ -36,6 +39,9 @@ public class QuestionImp implements Question{
 	@Override
 	public void addQuestion() {
 		
+		
+		
+		
 		System.out.println("Please Enter Question : -");
 		ques = scan.nextLine();
 		
@@ -50,6 +56,7 @@ public class QuestionImp implements Question{
 
 		System.out.println("Please Enter 4th Option : -");
 		opt4 = scan.nextLine();
+		
 		
 //		This will ask to add Right Answer
 		System.out.println("Please Enter Right Answer : -");
