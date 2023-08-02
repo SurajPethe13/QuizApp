@@ -7,7 +7,7 @@ import java.sql.SQLException;
 public class ConnectionClass {
 
 
-	Connection con = null;
+	public static Connection con = null;
 	public Connection getConnectionDetails() {
 		
 		try {
@@ -20,8 +20,7 @@ public class ConnectionClass {
 			e.printStackTrace();
 		}
 		
-		QuestionImp ques = new QuestionImp(con);
-		ques.addQuestion();
+	
 		
 		return con;
 	}
@@ -35,10 +34,10 @@ public class ConnectionClass {
 		}
 	}
 	
-	public static void main(String[] args) {
-		
-		ConnectionClass obj = new ConnectionClass();
-		Connection con = obj.getConnectionDetails();
-	}
+//	public static void main(String[] args) {
+//		
+//		ConnectionClass obj = new ConnectionClass();
+//		Connection con = obj.getConnectionDetails();
+//	}
 	
 }
